@@ -1,0 +1,110 @@
+---
+import "../styles/global.css";
+
+const apps = [
+  {
+    title: "Bitfolio",
+    description: "Track your wealth, investment portfolios and savings.",
+    url: "https://bitfolio.app",
+    image: "/images/bitfolio.png",
+  },
+  {
+    title: "NewsNinja",
+    description: "Smart feed reader for RSS, Reddit, Youtube with AI capabilities.",
+    url: "https://ainews.ninja",
+    image: "/images/newsninja.png",
+  },
+  {
+    title: "iStory",
+    description: "View your photos, organized by the Apple device they were shot with.",
+    url: "https://istory.timelabs.io",
+    image: "/images/istory.png",
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Timelabs — Mobile apps for tracking, reading, and journaling. Discover Bitfolio, NewsNinja, and iStory."
+    />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content="Timelabs — Mobile Apps" />
+    <meta
+      property="og:description"
+      content="Mobile apps for tracking, reading, and journaling."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://timelabs.io" />
+    <title>Timelabs — Mobile Apps</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body
+    class="min-h-screen flex flex-col bg-gradient-main text-gray-800 antialiased"
+  >
+    <!-- Header -->
+    <header class="pt-12 pb-6 sm:pt-20 sm:pb-0 text-center">
+      <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight">Timelabs</h1>
+      <p class="mt-3 text-lg text-gray-500">Mobile apps we build and love</p>
+    </header>
+
+    <!-- App Cards -->
+    <main class="flex-1 flex items-center justify-center px-4 pb-20">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-xs sm:max-w-5xl w-full"
+      >
+        {
+          apps.map((app) => (
+            <a
+              href={app.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group block rounded-[3.5rem] bg-glass-bg border border-glass-border
+                     backdrop-blur-xl shadow-lg
+                     p-8 transition-all duration-300
+                     hover:bg-glass-bg-hover hover:shadow-2xl hover:scale-[1.02]
+                     focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-400"
+            >
+              <div class="aspect-square rounded-[72px] mb-4 overflow-hidden grid place-items-center">
+                <span class="col-start-1 row-start-1 text-5xl font-bold text-gray-400/40">
+                  {app.title[0]}
+                </span>
+                <img
+                  src={app.image}
+                  alt={`${app.title} app screenshot`}
+                  class="col-start-1 row-start-1 w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <h2 class="text-xl font-semibold group-hover:text-gray-900">
+                {app.title}
+              </h2>
+              <p class="mt-1 text-sm text-gray-500">{app.description}</p>
+            </a>
+          ))
+        }
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center border-t border-black/10">
+      <h2
+        class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-2"
+      >
+        Contact Us
+      </h2>
+      <a
+        href="mailto:support@timelabs.io"
+        class="text-gray-600 hover:text-gray-900 underline-offset-4 hover:underline transition-colors"
+      >
+        support@timelabs.io
+      </a>
+      <p class="mt-4 text-xs text-gray-400">
+        &copy; {new Date().getFullYear()} Timelabs. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
