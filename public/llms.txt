@@ -1,0 +1,14 @@
+# Timelabs
+
+> Timelabs is a mobile app studio that builds and maintains iOS apps for personal productivity. Our apps help users track their wealth, stay informed with smart news feeds, and organize their photo memories.
+
+## Apps
+
+- [Bitfolio](https://bitfolio.app): Wealth portfolio tracker — track your investments, savings, and net worth across multiple accounts.
+- [NewsNinja](https://ainews.ninja): Smart feed reader for RSS, Reddit, and YouTube with AI-powered summaries and filtering.
+- [iStory](https://istory.timelabs.io): Device diary app — view your photos organized by the Apple device they were shot with.
+
+## Contact
+
+- [Email Support](mailto:support@timelabs.io): Reach us at support@timelabs.io
+- [Website](https://timelabs.io): Main landing page

@@ -39,8 +39,63 @@ const apps = [
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://timelabs.io" />
+    <meta property="og:image" content="https://timelabs.io/images/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Timelabs — Mobile Apps" />
+    <meta name="twitter:description" content="Mobile apps for tracking, reading, and journaling." />
+    <meta name="twitter:image" content="https://timelabs.io/images/og-cover.png" />
     <title>Timelabs — Mobile Apps</title>
+    <link rel="canonical" href="https://timelabs.io" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Timelabs",
+          "url": "https://timelabs.io",
+          "logo": "https://timelabs.io/favicon.svg",
+          "description": "Timelabs builds mobile apps for tracking, reading, and journaling.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "support@timelabs.io",
+            "contactType": "customer support"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "name": "Timelabs",
+          "url": "https://timelabs.io"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Bitfolio",
+          "url": "https://bitfolio.app",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "iOS, Android",
+          "description": "Track your wealth, investment portfolios and savings.",
+          "author": { "@type": "Organization", "name": "Timelabs" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "NewsNinja",
+          "url": "https://ainews.ninja",
+          "applicationCategory": "NewsApplication",
+          "operatingSystem": "iOS, Android",
+          "description": "Smart feed reader for RSS, Reddit, Youtube with AI capabilities.",
+          "author": { "@type": "Organization", "name": "Timelabs" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "iStory",
+          "url": "https://istory.timelabs.io",
+          "applicationCategory": "PhotographyApplication",
+          "operatingSystem": "iOS",
+          "description": "View your photos, organized by the Apple device they were shot with.",
+          "author": { "@type": "Organization", "name": "Timelabs" }
+        }
+      ]
+    })} />
   </head>
   <body
     class="min-h-screen flex flex-col bg-gradient-main text-gray-800 antialiased"
