@@ -110,6 +110,16 @@ const canonicalUrl = locale === "en"
   <body
     class="min-h-screen flex flex-col bg-gradient-main text-gray-800 antialiased"
   >
+    {locale === "en" && (
+      <script is:inline>
+        if (!sessionStorage.getItem("locale-redirect")) {
+          sessionStorage.setItem("locale-redirect", "1");
+          var lang = (navigator.language || "").toLowerCase();
+          if (lang.startsWith("it")) window.location.replace("/it/");
+          else if (lang.startsWith("ja")) window.location.replace("/ja/");
+        }
+      </script>
+    )}
     <!-- Header -->
     <header class="pt-12 pb-6 sm:pt-20 sm:pb-0 text-center">
       <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight">Timelabs</h1>
